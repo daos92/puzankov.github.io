@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>sprite</title>
+<style>
+    body {
+        background: #f6f6f6;
+        margin: 30px;
+    }
+
+    .icons {
+        width: 70px;
+        height: 65px;
+        background: url(sprite.png) no-repeat 0 0;
+        display: inline-block;
+        margin: 20px;
+    }
+
+    .icons_1 {
+        background-position: 0 0;
+    }
+
+    .icons_2 {
+        background-position: -70px 0;
+    }
+
+    .icons_3 {
+        background-position: 0 -65px;
+    }
+
+    .icons_4 {
+        width: 74px;
+
+        background-position: -70px -65px;
+    }
+
+    .arrow {
+        width: 70px;
+        height: 70px;
+        background-color: #e4551d;
+        border-radius: 100%;
+        -moz-border-radius: 100%;
+        -webkit-border-radius: 100%;
+        text-align: center;
+        vertical-align: middle;
+        line-height: 70px;
+    }
+    
+    .arrow-i  {
+        background: url(sprite.png) no-repeat -143px 0;
+        width: 14px;
+        height: 31px;
+        display: inline-block;
+    }
+    
+    .arrow_up .arrow-i 
+    {
+        background-position: -143px -33px;
+    }
+
+
+</style>
+
+</head>
+<body>
+
+<div class="icons icons_1"></div>
+<div class="icons icons_2"></div>
+<div class="icons icons_3"></div>
+<div class="icons icons_4"></div>
+
+
+<div class="arrow">
+    <div class="arrow-i"></div>
+</div>
+
+
+<div class="arrow arrow_up">
+    <div class="arrow-i"></div>
+</div>
+
+
+</body>
+</html>
