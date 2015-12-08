@@ -8,15 +8,5 @@ var rulesCheck = document.body.querySelector('.footer__rules-checkbox');
 rulesCheck.addEventListener('click', enableButton);
 
 function enableButton() {
-
-    if (rulesCheck.checked) {
-
-        watchButton.disabled = false;
-
-    } else {
-
-        watchButton.disabled = true;
-
-    }
-
+    watchButton.disabled = !rulesCheck.checked;
 }

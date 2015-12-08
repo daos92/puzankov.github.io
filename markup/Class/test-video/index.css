@@ -4,9 +4,12 @@ html {
 
 .page {
     width: 100%;
+    margin: 0;
+    padding: 0;
+
+    background-color: #2f2f2f;
 
     font-family: 'Roboto', sans-serif;
-    /*background-color: #000;*/
 }
 
 .page__wrap {
@@ -14,7 +17,6 @@ html {
     flex-direction: column;
 
     width: 100%;
-    max-width: 640px;
 
     align-items: center;
 }
@@ -23,7 +25,7 @@ html {
     position: relative;
 
     width: 100%;
-    padding: 3.56% 0 3.56%;
+    padding: 20px 0;
 
     text-align: center;
 
@@ -47,7 +49,7 @@ html {
 }
 
 .header__logo-link span {
-    padding: 1.4% 0.78%;
+    padding: 3px 7px;
 
     color: #ff002a;
     border-radius: 15px;
@@ -58,38 +60,49 @@ html {
 
 .header__age-limit {
     position: absolute;
-    top: 10px;
+    top: 50%;
     left: 20px;
 
     width: 64px;
     height: 63px;
-    margin: 0;
+    margin: -31px 0 0;
 
     color: #fff;
     background: url('http://fs185.www.ex.ua/get/311532967835/211809942/age_limit.png') no-repeat;
 
-    font-size: 2.6rem;
+    font-size: 26px;
     font-weight: 400;
     line-height: 2.5;
 }
 
 .video-player {
+    width: 100%;
+    height: 773px;
+
     background: url('http://fs186.www.ex.ua/get/311532967835/211809952/video_player.jpg') no-repeat;
     background-position: center;
-    background-size: contain;
+    background-size: cover;
 }
 
 .video-player__wrap {
+    position: relative;
+
+    width: 100%;
     /*width: 640px;*/
-    /*height: 773px;*/
-    margin: 0 auto;
+    height: 773px;
 }
 
 .video-player__watch {
-    position: relative;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
 
-    margin: 47.46% 15% 15px 15%;
-    padding: 7.97% 21.09375% 10% 6.5625%;
+    width: 443px;
+    height: 195px;
+    margin: auto;
+    padding: 51px 135px 51px 42px;
 
     color: #fff;
     border: 1px solid #ee0622;
@@ -102,11 +115,12 @@ html {
 
 .video-player__watch::after {
     position: absolute;
-    top: 26%;
-    right: 8%;
+    top: 50%;
+    right: 6%;
 
     width: 84px;
     height: 93px;
+    margin-top: -43px;
 
     content: url('http://fs186.www.ex.ua/get/311532967835/211809949/video_play.png');
 }
@@ -116,7 +130,13 @@ html {
 }
 
 .video-player__watched {
-    margin: 0 0 7.17%;
+    position: absolute;
+    top: 50%;
+    left: 0;
+
+    width: 100%;
+    height: 20px;
+    margin: 120px auto 0;
 
     text-align: center;
 
@@ -127,8 +147,13 @@ html {
 }
 
 .video-player__cancel {
-    margin: 0 39%;
-    padding: 1.035% 3.125% 1.16%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    width: 200px;
+    margin: 170px 0 0 -100px ;
+    padding: 8px 20px;
 
     color: #fff;
     border: 2px solid #91949a;
@@ -144,43 +169,50 @@ html {
 }
 
 .footer {
+    width: 100%;
+
     color: #858585;
     background-color: #2f2f2f;
 
     font-size: 24px;
     font-weight: 300;
-    width: 100%;
-
+    line-height: 1;
 }
 
 .footer__rules {
-    padding: 4% 4.6875% 6% 3.90625%;
+    padding: 20px;
 }
 
 .footer__rules-checkbox {
     display: none;
 }
 
-.footer__rules-sprite {
-    display: block;
+.footer__rules-label::before {
     position: absolute;
+    top: 0;
+    left: -45px;
+
+    display: block;
 
     width: 35px;
     height: 35px;
 
+    content: '';
     cursor: pointer;
 
-    background: url('http://fs185.www.ex.ua/get/311532967835/211809944/sprite_checkbox.png') -40px top no-repeat;
+    background: url('http://fs185.www.ex.ua/get/311532967835/211809944/sprite_checkbox.png') -40px 0 no-repeat;
 }
 
-.footer__rules-checkbox:checked + .footer__rules-label .footer__rules-sprite {
-    background: url('http://fs185.www.ex.ua/get/311532967835/211809944/sprite_checkbox.png') left top no-repeat;
+.footer__rules-checkbox:checked + .footer__rules-label::before {
+    background-position: 0 0;
 }
 
 .footer__rules-label {
-    padding-left: 0.78125%;
-    margin-left: 45px;
+    position: relative;
+
     display: block;
+
+    margin-left: 45px;
 }
 
 .footer__rules-decortext {
